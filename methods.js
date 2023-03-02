@@ -44,14 +44,16 @@ const products = [
 ];
 
 // console.log(users)
+// Filter the array and return modified data
 function colorFilter(c){
     return c.filter((item)=> item.favoriteColor==="Yellow")
 }
+// Return modified data with the same length as the original
 function fullName(c){
     return c.map((item)=> item.firstName+' '+item.lastName)
 }
 console.log(fullName(users))
-
+// add the total for each element with reduce
 function getTotal(c){
     return c.reduce((acc,item)=> (item.price + acc),0)
 }
